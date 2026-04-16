@@ -1,0 +1,19 @@
+.currency-converter { background:white;border:1.5px solid var(--border);border-radius:16px;padding:16px;margin-bottom:16px; }
+.cc-header { display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap; }
+.cc-title { font-size:14px;font-weight:700;color:var(--text-primary);flex:1; }
+.cc-fallback { font-size:10px;color:#F5A623;background:rgba(245,166,35,0.1);padding:2px 7px;border-radius:6px;font-weight:600; }
+.cc-updated { font-size:11px;color:var(--text-muted); }
+.cc-refresh { background:none;border:1.5px solid var(--border);border-radius:7px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-muted);transition:all 0.15s; }
+.cc-refresh:hover { border-color:var(--ocean);color:var(--ocean); }
+.cc-inputs { display:flex;align-items:center;gap:10px;margin-bottom:12px; }
+.cc-group { display:flex;align-items:center;gap:0;flex:1;border:1.5px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color 0.2s; }
+.cc-group:focus-within { border-color:var(--ocean); }
+.cc-amount { flex:1;padding:10px 12px;border:none;outline:none;font-size:16px;font-weight:700;color:var(--text-primary);font-family:'DM Sans',sans-serif; }
+.cc-result { flex:1;padding:10px 12px;font-size:16px;font-weight:800;color:var(--ocean);min-width:80px; }
+.cc-sel { padding:10px 8px;border:none;border-left:1.5px solid var(--border);background:#F8FAFC;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;color:var(--text-secondary);cursor:pointer;outline:none; }
+.cc-swap { width:36px;height:36px;background:var(--ocean);color:white;border:none;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.15s; }
+.cc-swap:hover { background:#083d58;transform:scale(1.08); }
+.cc-result-group .cc-result { color:var(--ocean); }
+.cc-quick { display:flex;flex-wrap:wrap;gap:6px; }
+.cc-quick-btn { padding:4px 10px;border:1.5px solid var(--border);border-radius:8px;font-size:11px;font-weight:600;cursor:pointer;background:white;color:var(--text-secondary);transition:all 0.15s;font-family:'DM Sans',sans-serif; }
+.cc-quick-btn:hover { border-color:var(--ocean);color:var(--ocean);background:rgba(10,77,110,0.04); }

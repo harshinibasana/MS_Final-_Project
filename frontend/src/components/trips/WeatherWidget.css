@@ -1,0 +1,23 @@
+.weather-widget { background:linear-gradient(135deg,#0a3a52,#0A4D6E);border-radius:16px;padding:16px;color:white;margin-bottom:16px; }
+.weather-widget.loading { display:flex;align-items:center;gap:10px;font-size:13px;color:#94a3b8;background:#F8FAFC;border:1.5px solid var(--border); }
+.weather-widget.error { display:flex;align-items:center;gap:10px;font-size:13px;color:#EF4444;background:#FFF5F5;border:1.5px solid #FECACA; }
+.ww-retry { background:none;border:1px solid #FECACA;border-radius:6px;padding:3px 8px;font-size:11px;cursor:pointer;color:#EF4444;display:flex;align-items:center;gap:4px; }
+.ww-header { display:flex;align-items:center;justify-content:space-between;margin-bottom:12px; }
+.ww-title { font-size:13px;font-weight:600;color:rgba(255,255,255,0.8); }
+.ww-refresh { background:rgba(255,255,255,0.1);border:none;border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(255,255,255,0.7);transition:all 0.15s; }
+.ww-refresh:hover { background:rgba(255,255,255,0.2);color:white; }
+.ww-current { display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.1); }
+.ww-temp { font-size:44px;font-weight:800;line-height:1;font-family:'Playfair Display',serif; }
+.ww-desc { flex:1; }
+.ww-condition { font-size:15px;font-weight:600;margin-bottom:2px; }
+.ww-feels { font-size:11px;color:rgba(255,255,255,0.6); }
+.ww-stats { display:flex;flex-direction:column;gap:4px; }
+.ww-stat { display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,0.75); }
+.ww-forecast { display:grid;grid-template-columns:repeat(7,1fr);gap:4px; }
+.ww-day { display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 3px;border-radius:9px;background:rgba(255,255,255,0.07); }
+.ww-day-label { font-size:10px;font-weight:700;color:rgba(255,255,255,0.65);text-transform:uppercase; }
+.ww-day-icon { font-size:18px; }
+.ww-day-temps { display:flex;gap:4px; }
+.ww-hi { font-size:12px;font-weight:700;color:white; }
+.ww-lo { font-size:12px;color:rgba(255,255,255,0.5); }
+.ww-rain { font-size:9px;color:#60c9f8;display:flex;align-items:center;gap:1px; }

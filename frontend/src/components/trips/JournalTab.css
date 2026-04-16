@@ -1,0 +1,48 @@
+/* ── Journal Tab ─────────────────────────────────────────── */
+.journal-tab { display:flex;flex-direction:column;gap:16px; }
+.journal-header { display:flex;align-items:center;justify-content:space-between; }
+.journal-header h3 { font-size:18px;font-weight:700;color:var(--text-primary);margin-bottom:2px; }
+.journal-sub { font-size:12px;color:var(--text-muted); }
+
+/* Form */
+.journal-form { background:linear-gradient(135deg,rgba(10,77,110,0.03),rgba(232,97,77,0.02));border:1.5px solid var(--ocean);border-radius:14px;padding:18px; }
+.jf-header { display:flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--ocean);margin-bottom:14px; }
+.jf-row { display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap; }
+.jf-field { display:flex;flex-direction:column;gap:4px;min-width:0; }
+.jf-grow { flex:1; }
+.jf-field label { font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.4px;display:flex;align-items:center;gap:4px; }
+.jf-field input,.jf-field select { padding:8px 11px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--text-primary);background:white;outline:none;transition:border-color 0.2s; }
+.jf-field input:focus,.jf-field select:focus { border-color:var(--ocean); }
+.jf-textarea { padding:12px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--text-primary);background:white;outline:none;transition:border-color 0.2s;resize:vertical;line-height:1.7;width:100%;box-sizing:border-box; }
+.jf-textarea:focus { border-color:var(--ocean); }
+.jf-word-count { font-size:11px;color:var(--text-muted);text-align:right;margin-top:2px; }
+.jf-actions { display:flex;justify-content:flex-end;gap:8px;margin-top:8px; }
+
+/* Empty */
+.journal-empty { text-align:center;padding:48px 20px; }
+.journal-empty h4 { font-size:18px;color:var(--text-primary);margin:12px 0 8px; }
+.journal-empty p { font-size:13px;color:var(--text-muted);max-width:320px;margin:0 auto 18px;line-height:1.7; }
+
+/* Timeline */
+.journal-timeline { display:flex;flex-direction:column;gap:0;position:relative; }
+.journal-entry { display:flex;gap:0;position:relative; }
+.je-dot { width:36px;height:36px;border-radius:50%;border:3px solid white;box-shadow:0 0 0 2px rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;z-index:1;margin-top:16px; }
+.je-line { position:absolute;left:17px;top:52px;bottom:-16px;width:2px;background:var(--border);z-index:0; }
+.je-card { flex:1;margin-left:14px;margin-bottom:16px;background:white;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;transition:all 0.2s; }
+.je-card:hover { box-shadow:0 4px 16px rgba(10,77,110,0.09); }
+.je-card.open { border-color:rgba(10,77,110,0.25); }
+.je-card-header { display:flex;align-items:flex-start;justify-content:space-between;padding:13px 15px;cursor:pointer;gap:10px; }
+.je-meta { display:flex;flex-direction:column;gap:3px; }
+.je-date { font-size:13px;font-weight:700;color:var(--text-primary); }
+.je-loc,.je-weather { font-size:11px;color:var(--text-muted);display:flex;align-items:center;gap:3px; }
+.je-right { display:flex;align-items:center;gap:8px;flex-shrink:0; }
+.je-mood-badge { font-size:11px;font-weight:600;padding:2px 9px;border-radius:8px;white-space:nowrap; }
+.je-title { font-size:15px;font-weight:700;color:var(--text-primary);padding:0 15px 8px;border-bottom:1px solid var(--border); }
+.je-content { font-size:14px;color:var(--text-secondary);padding:12px 15px;line-height:1.75;max-height:72px;overflow:hidden;text-overflow:ellipsis;white-space:pre-wrap;transition:max-height 0.3s ease; }
+.je-content.expanded { max-height:2000px; }
+.je-tags { display:flex;flex-wrap:wrap;gap:5px;padding:0 15px 10px; }
+.je-tag { font-size:11px;background:rgba(10,77,110,0.08);color:var(--ocean);padding:2px 8px;border-radius:8px;font-weight:600; }
+.je-actions { display:flex;gap:8px;padding:10px 15px;border-top:1px solid var(--border);background:#F8FAFC; }
+.je-btn { display:flex;align-items:center;gap:5px;padding:6px 12px;border-radius:8px;border:1.5px solid var(--border);font-size:12px;font-weight:600;cursor:pointer;background:white;font-family:'DM Sans',sans-serif;transition:all 0.15s; }
+.je-edit:hover { border-color:var(--ocean);color:var(--ocean);background:rgba(10,77,110,0.05); }
+.je-del:hover { border-color:#EF4444;color:#EF4444;background:rgba(239,68,68,0.05); }

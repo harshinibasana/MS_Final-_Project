@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0A4D6E" />
+    <meta name="description" content="Travelify - Your comprehensive travel planning platform" />
+    <title>Travelify ✈️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      body { margin: 0; }
+      .loading-screen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #F0F4F8;
+      }
+      .loader {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #E2E8F0;
+        border-top-color: #0A4D6E;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="loading-screen"><div class="loader"></div></div>
+    </div>
+  </body>
+</html>

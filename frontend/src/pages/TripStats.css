@@ -1,0 +1,105 @@
+/* ── Page layout ─────────────────────────────────────────── */
+.stats-page { max-width:1200px;margin:0 auto; }
+.stats-loading { display:flex;align-items:center;justify-content:center;min-height:60vh; }
+.stats-header { display:flex;align-items:flex-start;gap:16px;margin-bottom:28px;flex-wrap:wrap; }
+.stats-header h1 { font-size:24px;font-weight:800;color:var(--text-primary);margin-bottom:4px; }
+.stats-header p { font-size:13px;color:var(--text-muted); }
+
+/* ── Hero grid ───────────────────────────────────────────── */
+.stats-hero-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px; }
+
+.shero-card {
+  background:white;border-radius:18px;border:1.5px solid var(--border);
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+  overflow:hidden;transition:all 0.2s;
+}
+.shero-card.clickable { cursor:pointer; }
+.shero-card.clickable:hover { transform:translateY(-3px);box-shadow:0 8px 24px rgba(10,77,110,0.10); }
+.shero-card.open { border-color:rgba(10,77,110,0.3);box-shadow:0 8px 32px rgba(10,77,110,0.12); }
+
+.shero-top { display:flex;align-items:flex-start;gap:12px;padding:18px 18px 14px; }
+.shero-icon { width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+.shero-text { flex:1;min-width:0; }
+.shero-val { font-size:26px;font-weight:800;color:var(--text-primary);font-family:'Playfair Display',serif;line-height:1.1; }
+.shero-label { font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px; }
+.shero-sub { font-size:11px;color:var(--text-muted);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+.shero-chevron { color:#94a3b8;flex-shrink:0;margin-top:2px;transition:transform 0.2s; }
+.shero-card.open .shero-chevron { transform:rotate(90deg); }
+
+/* Colour themes */
+.shero-ocean  .shero-icon { background:#EFF6FF;color:var(--ocean); }
+.shero-coral  .shero-icon { background:#FFF5F5;color:var(--coral); }
+.shero-sage   .shero-icon { background:#F0FFF4;color:var(--sage); }
+.shero-gold   .shero-icon { background:#FFFBEB;color:#F5A623; }
+.shero-purple .shero-icon { background:rgba(139,92,246,0.1);color:#8B5CF6; }
+.shero-green  .shero-icon { background:rgba(34,197,94,0.1);color:#22c55e; }
+.shero-red    .shero-icon { background:rgba(239,68,68,0.1);color:#EF4444; }
+
+/* Expanded detail panel */
+.shero-detail {
+  padding:0 16px 16px;
+  border-top:1.5px solid var(--border);
+  margin-top:0;
+  padding-top:14px;
+  animation:slideDown 0.2s ease;
+}
+@keyframes slideDown { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:translateY(0)} }
+
+/* Detail content */
+.sd-countries { display:flex;flex-wrap:wrap;gap:6px; }
+.sd-country-chip { display:flex;align-items:center;gap:5px;background:rgba(10,77,110,0.08);color:var(--ocean);padding:4px 10px;border-radius:12px;font-size:12px;font-weight:600; }
+.sd-trips,.sd-status { display:flex;flex-direction:column;gap:6px; }
+.sd-trip-row,.sd-status-row { display:flex;align-items:center;gap:8px;font-size:12px; }
+.sd-trip-dot,.sd-status-dot { width:8px;height:8px;border-radius:50%;flex-shrink:0; }
+.sd-trip-name,.sd-status-name { flex:1;font-weight:600;color:#1e293b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+.sd-trip-dest { font-size:11px;color:#94a3b8;min-width:60px; }
+.sd-trip-val { font-weight:700;color:#1e293b;min-width:48px;text-align:right;font-size:12px; }
+.sd-mini-bar-wrap { flex:1;height:6px;background:#F1F5F9;border-radius:4px;overflow:hidden;min-width:40px; }
+.sd-mini-bar { height:100%;border-radius:4px;transition:width 0.5s ease; }
+.sdb-row { display:flex;justify-content:space-between;font-size:13px;padding:4px 0;border-bottom:1px solid #F1F5F9; }
+.sdb-bar { height:10px;background:#F1F5F9;border-radius:6px;overflow:hidden;margin:10px 0 4px; }
+.sdb-fill { height:100%;background:var(--coral);border-radius:6px;transition:width 0.5s; }
+.sdb-labels { display:flex;justify-content:space-between;font-size:10px;color:#94a3b8; }
+
+/* ── Charts grid ─────────────────────────────────────────── */
+.stats-grid { display:grid;grid-template-columns:1fr 1fr;gap:18px; }
+.stat-card { background:white;border-radius:18px;padding:20px;border:1.5px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,0.04); }
+.stat-card.stat-wide { grid-column:span 2; }
+.stat-card h3 { font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:16px; }
+
+/* ── Parallel pie + bar ──────────────────────────────────── */
+.cat-charts-row { display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center; }
+.cat-pie-wrap { position:relative; }
+.pie-hint { text-align:center;font-size:11px;color:#94a3b8;margin-top:-8px; }
+.cat-bar-wrap { min-width:0; }
+
+/* ── Monthly chart ───────────────────────────────────────── */
+/* ── Destinations ────────────────────────────────────────── */
+.dest-list { display:flex;flex-direction:column;gap:8px; }
+.dest-row { display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--mist);border-radius:10px; }
+.dest-rank { font-size:12px;font-weight:800;color:var(--ocean);min-width:24px; }
+.dest-name { flex:1;font-size:13px;font-weight:600;color:var(--text-primary); }
+.dest-count { font-size:11px;color:var(--text-muted);white-space:nowrap; }
+
+/* ── Countries ───────────────────────────────────────────── */
+.country-grid { display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px; }
+.country-chip { display:flex;align-items:center;gap:5px;background:rgba(10,77,110,0.07);color:var(--ocean);padding:4px 10px;border-radius:16px;font-size:12px;font-weight:600; }
+.country-total { font-size:13px;color:var(--text-muted); }
+
+/* ── Empty ───────────────────────────────────────────────── */
+.stat-empty { grid-column:span 2;text-align:center;padding:60px 20px; }
+.stat-empty h3 { font-size:20px;margin-bottom:8px; }
+.stat-empty p { font-size:13px;color:var(--text-muted);margin-bottom:20px; }
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media(max-width:900px){
+  .cat-charts-row { grid-template-columns:1fr; }
+}
+@media(max-width:800px){
+  .stats-hero-grid { grid-template-columns:1fr 1fr; }
+  .stats-grid { grid-template-columns:1fr; }
+  .stat-card.stat-wide { grid-column:span 1; }
+}
+@media(max-width:500px){
+  .stats-hero-grid { grid-template-columns:1fr; }
+}

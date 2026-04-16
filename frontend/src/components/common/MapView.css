@@ -1,0 +1,45 @@
+/* ── MapView Component ────────────────────────────────────── */
+.mapview-wrap { display:flex; flex-direction:column; gap:0; border-radius:14px; overflow:hidden; border:1.5px solid #E2E8F0; box-shadow:0 4px 16px rgba(0,0,0,0.08); }
+
+.mapview-container { width:100%; position:relative; background:#E8EFF6; }
+.mapview-iframe { width:100%; height:100%; border:none; display:block; }
+
+.mapview-actions {
+  display:flex; gap:6px; flex-wrap:wrap; padding:10px 12px;
+  background:white; border-top:1.5px solid #E2E8F0;
+}
+.mva-btn {
+  display:inline-flex; align-items:center; gap:5px;
+  padding:6px 12px; border-radius:8px;
+  background:#F8FAFC; border:1.5px solid #E2E8F0;
+  font-size:12px; font-weight:600; color:#475569;
+  text-decoration:none; transition:all 0.15s;
+  font-family:'DM Sans',sans-serif;
+}
+.mva-btn:hover { background:var(--ocean); border-color:var(--ocean); color:white; }
+
+/* Geocode prompt */
+.mapview-geocode, .mapview-empty {
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+  padding:32px 20px; background:#F8FAFC;
+  border:1.5px dashed #CBD5E1; border-radius:14px; text-align:center;
+}
+.mvg-icon, .mapview-empty svg { color:#94a3b8; }
+.mvg-text, .mapview-empty p { font-size:13px; color:#64748b; margin:0; }
+.mvg-btn {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:8px 18px; background:var(--ocean); color:white;
+  border:none; border-radius:10px; font-size:13px; font-weight:600;
+  cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.2s;
+}
+.mvg-btn:hover { background:#083d58; transform:translateY(-1px); }
+.mvg-loading {
+  width:24px; height:24px; border:2.5px solid #E2E8F0;
+  border-top-color:var(--ocean); border-radius:50%;
+  animation:spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+
+/* OSM actions inside Explore panel */
+.dp-map-osm { display:flex; flex-direction:column; gap:0; border-radius:12px; overflow:hidden; border:1.5px solid #E2E8F0; }
+.osm-actions { display:flex; gap:6px; flex-wrap:wrap; padding:10px 12px; background:white; border-top:1.5px solid #E2E8F0; }

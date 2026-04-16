@@ -1,0 +1,240 @@
+.dest-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 27, 42, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+.dest-modal {
+  background: white;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 740px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.25s ease;
+}
+
+.dest-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  transition: background var(--transition);
+}
+
+.dest-modal-close:hover { background: rgba(0,0,0,0.6); }
+
+.dest-modal-hero {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 24px 24px 0 0;
+}
+
+.dest-modal-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 60%, transparent 100%);
+  border-radius: 24px 24px 0 0;
+}
+
+.dest-modal-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  color: white;
+}
+
+.dest-modal-cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.dest-modal-hero-content h2 { font-size: 28px; margin-bottom: 6px; }
+.dest-modal-location { display: flex; align-items: center; gap: 4px; font-size: 13px; opacity: 0.85; margin-bottom: 8px; }
+
+.dest-modal-rating-summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.dest-modal-stars { display: flex; gap: 2px; }
+.dest-modal-review-count { font-weight: 400; opacity: 0.75; font-size: 13px; }
+
+.dest-modal-body { padding: 24px; }
+
+/* Entry Fee Card */
+.dest-info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.dest-fee-card {
+  background: linear-gradient(135deg, #FFF9F0, #FFF3E0);
+  border: 1px solid rgba(245,166,35,0.3);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+}
+
+.dest-fee-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: #B7791F;
+}
+
+.dest-fee-header h3 { font-size: 15px; font-family: 'DM Sans'; font-weight: 600; flex: 1; }
+
+.badge-free {
+  background: var(--sage);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.5px;
+}
+
+.fee-free-text { color: var(--sage); font-weight: 500; font-size: 14px; }
+
+.fee-grid { display: flex; gap: 12px; flex-wrap: wrap; }
+.fee-item { text-align: center; }
+.fee-item-label { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+.fee-item-value { font-size: 16px; font-weight: 700; color: #B7791F; font-family: 'Playfair Display'; }
+.fee-notes { font-size: 12px; color: var(--text-secondary); margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(245,166,35,0.2); }
+
+.dest-quick-info {
+  background: var(--mist);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.quick-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--ocean);
+}
+
+.quick-info-label { font-size: 11px; color: var(--text-muted); margin-bottom: 2px; }
+.quick-info-value { font-size: 13px; color: var(--text-primary); font-weight: 500; }
+.quick-info-link { display: flex; align-items: center; gap: 3px; font-size: 13px; color: var(--ocean); font-weight: 500; }
+.quick-info-link:hover { text-decoration: underline; }
+
+/* Sections */
+.dest-section { margin-bottom: 24px; }
+.dest-section h4 { font-size: 16px; font-family: 'DM Sans'; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+
+.dest-description { color: var(--text-secondary); line-height: 1.8; font-size: 14px; }
+
+.dest-tips { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.dest-tips li { font-size: 14px; color: var(--text-secondary); padding: 8px 12px; background: var(--mist); border-radius: 8px; border-left: 3px solid var(--ocean); }
+
+.hours-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+.hours-row { display: flex; justify-content: space-between; padding: 7px 12px; border-radius: 8px; background: var(--mist); font-size: 13px; }
+.hours-row.closed { opacity: 0.5; }
+.hours-day { font-weight: 500; }
+.hours-time { color: var(--text-secondary); }
+
+.dest-tags-full { display: flex; flex-wrap: wrap; gap: 6px; }
+.dest-tag-full { background: rgba(10,77,110,0.08); color: var(--ocean); padding: 4px 12px; border-radius: 12px; font-size: 12px; }
+
+/* Reviews */
+.review-count-badge { background: var(--mist); color: var(--text-muted); font-size: 12px; padding: 2px 8px; border-radius: 10px; font-family: 'DM Sans'; font-weight: 400; }
+
+.write-review {
+  background: var(--mist);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.write-review-label { font-size: 13px; font-weight: 500; margin-bottom: 10px; color: var(--text-secondary); }
+
+.star-input { display: flex; gap: 4px; margin-bottom: 12px; }
+.star-clickable { cursor: pointer; transition: transform 0.1s; }
+.star-clickable:hover { transform: scale(1.2); }
+
+.review-textarea { resize: vertical; margin-bottom: 12px; border-radius: 8px; }
+
+.reviews-list { display: flex; flex-direction: column; gap: 12px; }
+
+.review-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+  background: var(--mist);
+  border-radius: var(--radius);
+}
+
+.review-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--ocean), var(--ocean-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 5px; }
+.review-name { font-weight: 600; font-size: 14px; }
+.review-stars { display: flex; gap: 1px; }
+.review-comment { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+.no-reviews { font-size: 14px; color: var(--text-muted); text-align: center; padding: 20px; }
+
+.dest-modal-skeleton {
+  height: 500px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 24px;
+}
+
+@media (max-width: 600px) {
+  .dest-info-section { grid-template-columns: 1fr; }
+  .hours-grid { grid-template-columns: 1fr; }
+}
